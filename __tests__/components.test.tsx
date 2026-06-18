@@ -30,3 +30,27 @@ describe('Projects component', () => {
     expect(screen.getByRole('link', { name: /GitHub Repo/i })).toHaveAttribute('href', 'https://github.com/josemejias11/jdmqademo');
   });
 });
+
+import { fireEvent, waitFor } from '@testing-library/react';
+import AutomationLab from '../components/AutomationLab';
+
+describe('AutomationLab component', () => {
+  it('runs API test and displays results', async () => {
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve({ success: true, message: 'API check complete', durationMs: 120 })
+      })
+    ) as jest.Mock;
+
+    render(<AutomationLab />);
+    
+    const button = screen.getByRole('button', { name: /Run API Test/i });
+    fireEvent.click(button);
+    
+    await waitFor(() => {
+      expect(screen.getByText(/API check complete/i)).toBeInTheDocument();
+    });
+    
+    expect(screen.getByText(/120/i)).toBeInTheDocument();
+  });
+});

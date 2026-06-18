@@ -1,3 +1,8 @@
 .main {
-  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }

@@ -1,7 +1,30 @@
 .experience {
-  padding: 2rem;
+  padding: 0;
 }
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
 .timeline {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline li {
+  padding: 1.5rem;
+  background-color: var(--bg-card-glass);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+}
+
+.timeline li:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-hover);
 }

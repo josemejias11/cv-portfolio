@@ -1,0 +1,19 @@
+.hero {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.name {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.title {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.summary {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}

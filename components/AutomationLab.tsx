@@ -99,7 +99,12 @@ export default function AutomationLab() {
           <span className="w-2 h-6 bg-[var(--color-accent-primary)] rounded-sm inline-block animate-pulse"></span>
           Live Automation Lab
         </h2>
-        <p className="text-[var(--color-text-secondary)] mb-6">Trigger a live Playwright UI test suite on GitHub Actions to see a live demo in action.</p>
+        <p className="text-[var(--color-text-secondary)] mb-6">
+          Trigger a live Playwright UI test suite on GitHub Actions to see a live demo in action.{' '}
+          <a href="https://github.com/josemejias11/cv-portfolio/actions/workflows/automation-lab.yml" target="_blank" rel="noopener noreferrer" className="text-[var(--color-accent-primary)] hover:underline font-medium">
+            View GitHub Actions →
+          </a>
+        </p>
       </ScrollReveal>
       
       <ScrollReveal delay={0.2}>
@@ -123,8 +128,22 @@ export default function AutomationLab() {
             
             {error && <div className="text-red-400 mt-4">Error: {error}</div>}
             
-            {loading && steps.length === 0 && !error && (
-              <div className="text-zinc-400 animate-pulse mt-4">[GitHub] Triggering workflow & allocating runner...</div>
+            {loading && !error && (
+              <div className="mt-4 space-y-2">
+                <div className="text-zinc-400 animate-pulse">[GitHub] Triggering workflow & allocating runner...</div>
+                {runUrl && (
+                  <div>
+                    <a 
+                      href={runUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 underline inline-block"
+                    >
+                      View live progress on GitHub Actions →
+                    </a>
+                  </div>
+                )}
+              </div>
             )}
             
             {(steps.length > 0 || completed) && (

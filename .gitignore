@@ -3,3 +3,8 @@ node_modules
 coverage
 *.log
 .DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*

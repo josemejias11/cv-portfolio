@@ -7,8 +7,8 @@ test.describe('moodys.com Interactive Showcase', () => {
     
     // Attempt to dismiss the OneTrust cookie banner if it appears
     try {
-      const acceptCookiesBtn = page.locator('#onetrust-accept-btn-handler');
-      await acceptCookiesBtn.waitFor({ state: 'visible', timeout: 5000 });
+      const acceptCookiesBtn = page.locator('#accept-recommended-btn-handler, .onetrust-close-btn-handler').first();
+      await acceptCookiesBtn.waitFor({ state: 'visible', timeout: 15000 });
       await acceptCookiesBtn.click();
       // Wait for the banner overlay to completely disappear
       await page.waitForTimeout(1000);

@@ -26,10 +26,10 @@ export default function Hero() {
         
         <ScrollReveal delay={0.3}>
           <h2 className="text-2xl md:text-3xl text-[var(--color-text-secondary)] max-w-2xl font-medium tracking-tight mb-8">
-            Building bulletproof automation frameworks for 14+ years.
+            Senior Quality Assurance Enginner
           </h2>
           <p className="text-lg text-[var(--color-text-tertiary)] max-w-2xl mb-12 leading-relaxed">
-            Senior Quality Assurance Engineer specializing in Playwright, TypeScript, and CI/CD pipelines. I don't just write tests—I architect end-to-end quality systems that let teams ship faster with confidence.
+            Senior QA with a strong bias toward automation engineering. Built end-to-end Playwright + TypeScript test frameworks, integrated into CI/CD pipelines via GitHub Actions and Docker. Delivered automation coverage across UI, API, accessibility, and data layers for enterprise SaaS products. Experienced working with US-based distributed teams in Agile environments.
           </p>
         </ScrollReveal>
         

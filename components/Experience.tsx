@@ -13,7 +13,7 @@ const experiences: ExperienceItem[] = [
     role: "Senior Creative QA",
     company: "Lionbridge (Freelance)",
     date: "Dec 2024 – Present",
-    desc: "Validating localized digital/print assets against brand guidelines (Lenovo, Motorola, Vivo). Developed standardized checklist reducing inconsistency and rework.",
+    desc: "Delivered QA for localized digital and print creative assets for Lenovo, Vivo, Motorola, and Microsoft. Validated Adobe Experience Manager (AEM) content integration and multilingual website asset delivery. Applied visual regression and brand compliance validation across responsive web environments.",
   },
   {
     role: "Senior QA Specialist",

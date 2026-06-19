@@ -11,6 +11,15 @@ import { test, expect } from '@playwright/test';
 test.describe('moodys.com Accessibility', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('https://www.moodys.com/');
+    
+    try {
+      const acceptCookiesBtn = page.locator('#accept-recommended-btn-handler, .onetrust-close-btn-handler').first();
+      await acceptCookiesBtn.waitFor({ state: 'visible', timeout: 15000 });
+      await acceptCookiesBtn.click();
+      await page.waitForTimeout(1000);
+    } catch (e) {
+      // Ignore
+    }
   });
 
   test('Page has valid HTML lang attribute', async ({ page }) => {

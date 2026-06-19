@@ -13,50 +13,46 @@ const experiences: ExperienceItem[] = [
     role: "Senior Creative QA",
     company: "Lionbridge (Freelance)",
     date: "Dec 2024 – Present",
-    desc: "Delivered QA for localized digital and print creative assets for Lenovo, Vivo, Motorola, and Microsoft. Validated Adobe Experience Manager (AEM) content integration and multilingual website asset delivery. Applied visual regression and brand compliance validation across responsive web environments.",
+    desc: "Delivered creative QA for localized digital and print assets for Lenovo, Vivo, Motorola. Validated Adobe Experience Manager (AEM) content integration and multilingual asset delivery for Microsoft. Brand compliance validation across responsive web environments.",
   },
   {
     role: "Senior QA Specialist",
     company: "dotCMS, USA",
     date: "Aug 2022 – Dec 2024",
-    desc: "Implemented Playwright framework from scratch with Docker/GitHub Actions. Identified critical API contract gaps; established data validation strategy using PostgreSQL.",
+    desc: "Hands-on experience automation strategy on an enterprise headless CMS platform. Maintained Playwright test cases using TypeScript, executing in CI via Docker + GitHub Actions. API testing with Postman and custom scripts across multiple environments. Executed manual test cycles, cross-browser compatibility validation (macOS, Windows), and release regression using Docker containerization. Performed PostgreSQL queries for backend data consistency; assisted by engineering. Managed full defect lifecycle in TCMS; authored test plans, traceability matrices, and release documentation. Improved defect triage processes and defined QA strategy for functional and non functional testing.",
   },
   {
     role: "Senior QA Specialist",
     company: "Lionbridge, Costa Rica",
     date: "Jun 2018 – Sep 2022",
-    desc: "Established QA strategy and process documentation. Owned full QA lifecycle for VEINSA Costa Rica. Managed metadata updates for Adobe AEM platforms.",
+    desc: " Creative QA for enterprise brands including Microsoft, Lenovo, Vivo, and Motorola. Validated AEM integrations, multilingual assets, and SEO - Metadata deliverables. Conducted functional, and accessibility testing for web and mobile applications. Built and maintained a QA structure documentation across global functional teams.",
   },
   {
     role: "QA Specialist",
     company: "The Hangar Interactive, Costa Rica",
     date: "Oct 2017 – Dec 2017",
-    desc: "Validated website updates for Nissan and Infiniti brands, ensuring consistency across brand requirements.",
+    desc: "Validated website updates for Nissan and Infiniti brands, ensuring consistency across brand requirements. SEO auditing, and cross-browser/device compatibility validation compatibility validation",
   },
   {
     role: "QA Engineer",
     company: "Gorilla Logic, Costa Rica",
     date: "Oct 2016 – Aug 2017",
-    desc: "Performed responsive QA for SportsLabs client—validated cross-device functionality for US college athletic team websites.",
+    desc: "Performed responsive testing QA for SportsLabs client and validated cross-device functionality for US college athletic team websites. Maintained full test documentation and traceability",
   },
   {
     role: "QA Analyst",
     company: "Prodigious Latin America, Costa Rica",
     date: "Oct 2013 – Oct 2016",
-    desc: "Delivered QA for Whirlpool digital properties. Expanded scope to creative testing, ADA compliance, functional validation for Bank of America.",
+    desc: "Delivered QA for Whirlpool digital properties. Expanded scope to creative testing, ADA compliance, functional validation for Bank of America. Estimated coverage, executed functional test suites, and coached junior QA staff. WCAG standards to ensure websites are fully accessible to people with disabilities",
   },
   {
     role: "Quality Assurance Engineer",
     company: "Avantica, Costa Rica",
     date: "Mar 2011 – Jul 2013",
-    desc: "Executed functional and responsive testing for client Web-based applications; established defect tracking practices.",
+    desc: "Executed functional and responsive testing for client Web-based applications and defect tracking. Created QA tests scenarios for responsive and mobile native applications. Complete SLTC in Agile scrum workflows",
   }
 ];
 
-const skills = [
-  'Playwright', 'TypeScript', 'JavaScript', 'Node.js', 'Postman', 'REST/JSON', 
-  'PostgreSQL', 'Elasticsearch', 'GitHub Actions', 'Docker', 'CI/CD', 'ADA accessibility'
-];
 
 export default function Experience() {
   return (
@@ -77,24 +73,16 @@ export default function Experience() {
                 </span>
               </div>
               <p className="text-lg font-medium text-[var(--color-text-secondary)] mb-3">{exp.company}</p>
-              <p className="text-[var(--color-text-tertiary)] leading-relaxed">{exp.desc}</p>
+              <ul className="text-[var(--color-text-tertiary)] leading-relaxed list-disc pl-5 space-y-1">
+                {exp.desc.split('.').filter(d => d.trim().length > 0).map((sentence, i) => (
+                  <li key={i}>{sentence.trim()}.</li>
+                ))}
+              </ul>
             </div>
           </ScrollReveal>
         ))}
       </div>
 
-      <ScrollReveal delay={0.3}>
-        <div className="mt-12 bg-[var(--color-surface)] p-8 rounded-[2rem] border border-[var(--color-surface-border)]">
-          <h3 className="text-2xl font-semibold mb-6 text-[var(--color-text-primary)]">Core Competencies</h3>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span key={skill} className="px-4 py-2 bg-[var(--color-background)] border border-[var(--color-surface-border)] rounded-full text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] hover:border-[var(--color-accent-primary)]/50 transition-colors shadow-sm">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </ScrollReveal>
     </section>
   );
 }

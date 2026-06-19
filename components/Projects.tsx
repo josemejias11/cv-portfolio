@@ -11,19 +11,19 @@ export interface ProjectItem {
 const projects: ProjectItem[] = [
   {
     title: "JDMQADEMO",
-    desc: "Full-stack QA demo: TypeScript, React, Express, PostgreSQL, Playwright, Postman, Allure, Docker, GitHub Actions CI. Demonstrates end-to-end ownership of test automation architecture.",
+    desc: "Full-stack QA demo: TypeScript, React, Express, PostgreSQL, Playwright, Postman, Allure, Docker, GitHub Actions CI.",
     link: "https://github.com/josemejias11/jdmqademo",
-    tags: ["TypeScript", "React", "Playwright", "Docker", "CI/CD", "PostgreSQL"]
+    tags: ["TypeScript", "React", "Playwright", "Docker", "Express.js", "CI/CD"]
   },
   {
     title: "QA AUTOMATION STACK",
     desc: "TypeScript WebdriverIO framework with parallel execution, Allure reporting, API/UI/accessibility coverage.",
     link: "https://github.com/josemejias11/qa-auto-stack",
-    tags: ["TypeScript", "WebdriverIO", "Allure"]
+    tags: ["TypeScript", "WebdriverIO", "Allure", "API"]
   },
   {
     title: "DEMOS",
-    desc: "Showcasing demos for possible job applications. (Ongoing)",
+    desc: "Showcasing demos for job applications.",
     link: "https://github.com/josemejias11/demos",
     tags: ["Demos", "Testing"]
   }

@@ -8,8 +8,8 @@ const skillCategories = [
   { category: "Frameworks", skills: "Express.js, Node.js, Playwright" },
   { category: "Test Management", skills: "TestRails, TestLink, Allure reporting, Jira, Test plans — traceability authoring" },
   { category: "Databases & Observability", skills: "PostgreSQL, ClickHouse, Elasticsearch" },
-  { category: "QA Disciplines", skills: "Functional, Regression, API, Accessibility (ADA/JAWS), Cross-browser, Performance triage" },
-  { category: "Tools", skills: "Git/GitHub, WebStorm, VS Code, Adobe Experience Manager, Adobe CC" }
+  { category: "QA Disciplines", skills: "Functional, Regression, API, WCAG, Cross-browsing, Issues triage" },
+  { category: "Tools", skills: "GitHub, CLI, Sublime Text, WebStorm, Azure DevOps, AEM, Adobe CC" }
 ];
 
 export default function TechnicalSkills() {

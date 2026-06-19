@@ -11,7 +11,7 @@ export default function Hero() {
         <ScrollReveal delay={0.1}>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-surface-border)] mb-8">
             <span className="w-2 h-2 rounded-full bg-[var(--color-accent-primary)] animate-pulse"></span>
-            <span className="text-sm font-medium text-[var(--color-text-secondary)]">Available for new opportunities</span>
+            <span className="text-sm font-medium text-[var(--color-text-secondary)]">Open to Work</span>
           </div>
         </ScrollReveal>
         

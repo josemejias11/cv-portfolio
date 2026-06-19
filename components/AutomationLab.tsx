@@ -99,7 +99,7 @@ export default function AutomationLab() {
           <span className="w-2 h-6 bg-[var(--color-accent-primary)] rounded-sm inline-block animate-pulse"></span>
           Live Automation Lab
         </h2>
-        <p className="text-[var(--color-text-secondary)] mb-6">Trigger a live Playwright UI test suite on GitHub Actions to see my framework in action.</p>
+        <p className="text-[var(--color-text-secondary)] mb-6">Trigger a live Playwright UI test suite on GitHub Actions to see a live demo in action.</p>
       </ScrollReveal>
       
       <ScrollReveal delay={0.2}>

@@ -1,9 +1,23 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('moodys.com Interactive Showcase', () => {
-  test('Visually navigate menus and click links', async ({ page }) => {
-    // 1. Navigate to the homepage
+  test.beforeEach(async ({ page }) => {
+    // Navigate to the homepage
     await page.goto('https://www.moodys.com/', { waitUntil: 'load' });
+    
+    // Attempt to dismiss the OneTrust cookie banner if it appears
+    try {
+      const acceptCookiesBtn = page.locator('#onetrust-accept-btn-handler');
+      await acceptCookiesBtn.waitFor({ state: 'visible', timeout: 5000 });
+      await acceptCookiesBtn.click();
+      // Wait for the banner overlay to completely disappear
+      await page.waitForTimeout(1000);
+    } catch (e) {
+      // Ignore if the banner doesn't appear
+    }
+  });
+
+  test('Visually navigate menus and click links', async ({ page }) => {
 
     // 2. We want to find the top-level navigation items. 
     // On many modern sites, the main navigation items have role="menuitem" or are links inside the header nav.
@@ -78,7 +92,6 @@ test.describe('moodys.com Interactive Showcase', () => {
   
   for (const label of mainMenus) {
     test(`Click main menu item: ${label}`, async ({ page }) => {
-      await page.goto('https://www.moodys.com/', { waitUntil: 'load' });
 
       const item = page.locator(`text="${label}"`).first();
       

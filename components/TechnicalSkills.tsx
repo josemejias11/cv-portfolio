@@ -7,7 +7,7 @@ const skillCategories = [
   { category: "Languages", skills: "TypeScript" },
   { category: "Frameworks", skills: "Express.js, Node.js, Playwright" },
   { category: "Test Management", skills: "TestRails, TestLink, Allure reporting, Jira, Test plans — traceability authoring" },
-  { category: "Databases & Observability", skills: "PostgreSQL, ClickHouse, Elasticsearch" },
+  { category: "Databases", skills: "PostgreSQL, ClickHouse, Elasticsearch" },
   { category: "QA Disciplines", skills: "Functional, Regression, API, WCAG, Cross-browsing, Issues triage" },
   { category: "Tools", skills: "GitHub, CLI, Sublime Text, WebStorm, Azure DevOps, AEM, Adobe CC" }
 ];

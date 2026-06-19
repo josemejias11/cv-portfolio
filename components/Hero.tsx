@@ -26,7 +26,7 @@ export default function Hero() {
         
         <ScrollReveal delay={0.3}>
           <h2 className="text-2xl md:text-3xl text-[var(--color-text-secondary)] max-w-2xl font-medium tracking-tight mb-8">
-            Senior Quality Assurance Enginner
+            Senior Quality Assurance Engineer
           </h2>
           <p className="text-lg text-[var(--color-text-tertiary)] max-w-2xl mb-12 leading-relaxed">
             Senior QA with a strong bias toward automation engineering. Built end-to-end Playwright + TypeScript test frameworks, integrated into CI/CD pipelines via GitHub Actions and Docker. Delivered automation coverage across UI, API, accessibility, and data layers for enterprise SaaS products. Experienced working with US-based distributed teams in Agile environments.

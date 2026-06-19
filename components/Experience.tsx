@@ -19,7 +19,7 @@ const experiences: ExperienceItem[] = [
     role: "Senior QA Specialist",
     company: "dotCMS, USA",
     date: "Aug 2022 – Dec 2024",
-    desc: "Hands-on experience automation strategy on an enterprise headless CMS platform. Maintained Playwright test cases using TypeScript, executing in CI via Docker + GitHub Actions. API testing with Postman and custom scripts across multiple environments. Executed manual test cycles, cross-browser compatibility validation (macOS, Windows), and release regression using Docker containerization. Performed PostgreSQL queries for backend data consistency; assisted by engineering. Managed full defect lifecycle in TCMS; authored test plans, traceability matrices, and release documentation. Improved defect triage processes and defined QA strategy for functional and non functional testing.",
+    desc: "Hands-on experience automation strategy on an enterprise headless CMS platform. Maintained Playwright test cases using TypeScript, executing in CI via Docker + GitHub Actions. API testing with Postman and custom scripts across multiple environments. Executed manual test cycles, cross-browser compatibility validation (macOS, Windows), and release regression using Docker containerization. Performed PostgreSQL queries for backend data consistency; assisted by engineering. Managed full defect lifecycle in TCMS; authored test plans, traceability matrices, and release documentation. Improved defect triage processes and defined QA strategy for functional and non-functional testing.",
   },
   {
     role: "Senior QA Specialist",

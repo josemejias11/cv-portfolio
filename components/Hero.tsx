@@ -36,7 +36,7 @@ export default function Hero() {
         <ScrollReveal delay={0.4}>
           <div className="flex gap-4">
             <a href="#contact" className="px-8 py-4 bg-[var(--color-text-primary)] text-[var(--color-surface)] font-semibold rounded-full hover:opacity-80 transition-colors">
-              Let's work together
+              {"Let's work together"}
             </a>
             <a href="https://github.com/josemejias11" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[var(--color-surface)] text-[var(--color-text-primary)] font-semibold rounded-full hover:bg-white/5 transition-colors border border-[var(--color-surface-border)]">
               View GitHub

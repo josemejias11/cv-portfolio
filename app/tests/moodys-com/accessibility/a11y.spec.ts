@@ -17,7 +17,7 @@ test.describe('moodys.com Accessibility', () => {
       await acceptCookiesBtn.waitFor({ state: 'visible', timeout: 15000 });
       await acceptCookiesBtn.click();
       await page.waitForTimeout(1000);
-    } catch (e) {
+    } catch {
       // Ignore
     }
   });

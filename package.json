@@ -10,7 +10,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -30,6 +30,8 @@
     "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.61.0"
+    "@playwright/test": "^1.61.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.9"
   }
 }

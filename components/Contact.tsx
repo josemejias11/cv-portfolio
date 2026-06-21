@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-16 text-center">
       <ScrollReveal>
-        <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4 pl-2 text-[var(--color-text-primary)]">Let's Build Reliable Software</h2>
+        <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4 pl-2 text-[var(--color-text-primary)]">{"Let's Build Reliable Software"}</h2>
         <p className="text-lg text-[var(--color-text-secondary)] mb-12 max-w-2xl mx-auto leading-relaxed">
           Whether you need to establish a QA department from scratch, migrate legacy test suites, 
           or implement cutting-edge Playwright automation—I can help.

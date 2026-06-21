@@ -1,5 +1,11 @@
 import { NextResponse } from 'next/server';
 
+interface GitHubStep {
+  name: string;
+  status: string;
+  conclusion: string | null;
+}
+
 // We disable caching to ensure we get live polling results
 export const dynamic = 'force-dynamic';
 
@@ -50,7 +56,7 @@ export async function GET() {
     let steps = [];
     if (jobsData.jobs && jobsData.jobs.length > 0) {
       // Map steps to a safe format for the frontend
-      steps = jobsData.jobs[0].steps.map((step: any) => ({
+      steps = jobsData.jobs[0].steps.map((step: GitHubStep) => ({
         name: step.name,
         status: step.status,
         conclusion: step.conclusion
@@ -65,7 +71,7 @@ export async function GET() {
       steps
     });
 
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to fetch status' }, { status: 500 });
   }
 }

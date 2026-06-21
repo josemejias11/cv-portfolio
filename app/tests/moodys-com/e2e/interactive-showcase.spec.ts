@@ -12,7 +12,7 @@ test.describe('moodys.com Interactive Showcase', () => {
       await acceptCookiesBtn.click();
       // Wait for the banner overlay to completely disappear
       await page.waitForTimeout(1000);
-    } catch (e) {
+    } catch {
       // Ignore if the banner doesn't appear
     }
   });
@@ -57,10 +57,9 @@ test.describe('moodys.com Interactive Showcase', () => {
           // --- VISUAL SHOWCASE EFFECT: Highlight ---
           // Draw a thick red border around it to show intent
           await linkToClick.evaluate(node => {
-            // @ts-ignore
-            node.style.border = '4px solid red';
-            // @ts-ignore
-            node.style.backgroundColor = 'yellow';
+            const htmlNode = node as HTMLElement;
+            htmlNode.style.border = '4px solid red';
+            htmlNode.style.backgroundColor = 'yellow';
           });
           await page.waitForTimeout(1500); // Wait so the highlight is clearly seen
           
@@ -100,10 +99,9 @@ test.describe('moodys.com Interactive Showcase', () => {
 
       // --- VISUAL SHOWCASE EFFECT: Highlight ---
       await item.evaluate(node => {
-        // @ts-ignore
-        node.style.border = '4px solid green';
-        // @ts-ignore
-        node.style.backgroundColor = 'lightblue';
+        const htmlNode = node as HTMLElement;
+        htmlNode.style.border = '4px solid green';
+        htmlNode.style.backgroundColor = 'lightblue';
       });
       await page.waitForTimeout(1500); 
       

@@ -107,7 +107,7 @@ function useAutomationLab() {
       }
       
       setTimeout(() => startPolling(), 2000);
-    } catch (err) {
+    } catch {
       handleTriggerError('Network error triggering workflow');
     }
   };

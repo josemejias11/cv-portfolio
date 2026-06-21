@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ error: 'Unknown type' }, { status: 400 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }

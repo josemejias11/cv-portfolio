@@ -1,11 +1,13 @@
 import React from 'react';
 import ScrollReveal from './ScrollReveal';
-import AnimatedGrid from './AnimatedGrid';
+import ShaderGradient from './ShaderGradient';
+import ParticleField from './ParticleField';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center py-24 text-left border-b border-[var(--color-surface-border)] overflow-hidden">
-      <AnimatedGrid />
+    <section className="relative min-h-[90vh] flex flex-col justify-center py-24 text-left border-b border-[var(--color-surface-border)]">
+      <ShaderGradient />
+      <ParticleField />
       
       <div className="relative z-10 w-full">
         <ScrollReveal delay={0.1}>

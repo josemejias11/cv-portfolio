@@ -6,7 +6,15 @@ import ParticleField from './ParticleField';
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center py-24 text-left border-b border-[var(--color-surface-border)]">
-      <ShaderGradient />
+      <div
+        className="pointer-events-none absolute left-1/2 top-10 z-0 h-[30rem] w-[min(72rem,92vw)] -translate-x-1/2 overflow-hidden"
+        style={{
+          WebkitMaskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 40%, transparent 75%)',
+          maskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 40%, transparent 75%)',
+        }}
+      >
+        <ShaderGradient />
+      </div>
       <ParticleField />
       
       <div className="relative z-10 w-full">

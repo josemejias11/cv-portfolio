@@ -114,7 +114,7 @@ export default function ShaderGradient() {
     <canvas
       ref={canvasRef}
       className="pointer-events-none"
-      style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', width: '100vw', top: '-15vh', height: 'calc(100% + 30vh)' }}
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
     />
   );
 }

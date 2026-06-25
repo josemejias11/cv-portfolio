@@ -30,7 +30,7 @@ void main() {
   vec3 violet = vec3(0.65, 0.54, 0.98);
   float total = b1 + b2 + b3 + 0.001;
   vec3 color = (b1 * sky + b2 * violet + b3 * mix(sky, violet, 0.5)) / total;
-  float alpha = smoothstep(0.08, 0.6, b1 + b2 + b3) * 0.35;
+  float alpha = smoothstep(0.08, 0.6, b1 + b2 + b3) * 0.65;
 
   gl_FragColor = vec4(color, alpha);
 }

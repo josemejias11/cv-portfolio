@@ -6,18 +6,19 @@ import ParticleField from './ParticleField';
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center py-24 text-left border-b border-[var(--color-surface-border)]">
-      <div
-        className="pointer-events-none absolute left-1/2 top-10 z-0 h-[30rem] w-[min(72rem,92vw)] -translate-x-1/2 overflow-hidden"
-        style={{
-          WebkitMaskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 40%, transparent 75%)',
-          maskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 40%, transparent 75%)',
-        }}
-      >
-        <ShaderGradient />
-      </div>
       <ParticleField />
-      
-      <div className="relative z-10 w-full">
+
+      <div className="relative isolate z-10 w-full">
+        <div
+          className="pointer-events-none absolute left-1/2 top-[-1rem] z-0 h-[52rem] w-[min(100rem,120vw)] -translate-x-1/2 overflow-hidden"
+          style={{
+            WebkitMaskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 34%, transparent 82%)',
+            maskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 34%, transparent 82%)',
+          }}
+        >
+          <ShaderGradient />
+        </div>
+
         <ScrollReveal delay={0.1}>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-surface-border)] mb-8">
             <span className="w-2 h-2 rounded-full bg-[var(--color-accent-primary)] animate-pulse"></span>

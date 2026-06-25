@@ -8,3 +8,25 @@
 - The manual GitHub Actions workflow is `.github/workflows/automation-lab.yml`; it runs `app/tests/moodys-com/e2e/interactive-showcase.spec.ts` on Ubuntu with Node 20 and `workflow_dispatch` only.
 - `/api/tests/trigger` and `/api/tests/status` require `GITHUB_PAT`; both are hardcoded to `josemejias11/cv-portfolio`, so update those routes if the repo owner or name changes.
 - `/api/run-test` only handles `POST` with JSON `{ type: 'api' }` and calls `https://jsonplaceholder.typicode.com/todos/1`.
+
+## Subagent Routing
+
+Full routing table lives in `~/.config/opencode/AGENTS.md` (“Subagent Routing” section). For this repo:
+
+- **Component / Next.js / Tailwind changes** → `web-engineer`.
+- **Hero/visual layout, motion, design-system work** → `product-designer` first for rationale, then `web-engineer` to implement.
+- **Playwright specs, test strategy, RTM, bug reports** → `qa-automation-engineer`.
+- **Architecture / Type-1 decisions (e.g. swap the shader for a library, change the deploy story)** → `tech-lead` or `sdd-architect`.
+- **CI/workflow changes** → `devops-sre-engineer`.
+- **Security review of the `/api/*` routes** → `security-engineer`.
+
+Always specify the model explicitly when dispatching and prefer the cheapest model that can do the job.
+
+## SDD Model Selection
+
+Use this repo's SDD triplet (mechanical implementation pipeline) for spec-driven implementation work:
+
+- **Implementation (primary)** → `sdd-implementer` (`opencode-go/kimi-k2.7-code`) — writes code, runs tests, commits.
+- **Implementation (fallback)** → `general` (`openai/gpt-5.4-mini`) — default catch-all when no specialist clearly owns the work.
+- **Task review** → `sdd-reviewer` (`opencode-go/deepseek-v4-pro`) — reviews diffs for spec compliance and code quality.
+- **Architecture / final review** → `sdd-architect` (`openai/gpt-5.5-pro`) — reviews full-branch diffs, makes design and architecture decisions.

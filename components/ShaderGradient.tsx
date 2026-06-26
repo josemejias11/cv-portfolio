@@ -26,11 +26,11 @@ void main() {
   float b2 = exp(-dot(uv - c2, uv - c2) / (2.0 * r2 * r2));
   float b3 = exp(-dot(uv - c3, uv - c3) / (2.0 * r3 * r3));
 
-  vec3 sky = vec3(0.22, 0.74, 0.97);
-  vec3 violet = vec3(0.65, 0.54, 0.98);
+  vec3 sky = vec3(0.15, 0.25, 0.40);
+  vec3 violet = vec3(0.08, 0.12, 0.20);
   float total = b1 + b2 + b3 + 0.001;
   vec3 color = (b1 * sky + b2 * violet + b3 * mix(sky, violet, 0.5)) / total;
-  float alpha = smoothstep(0.08, 0.6, b1 + b2 + b3) * 0.65;
+  float alpha = smoothstep(0.08, 0.6, b1 + b2 + b3) * 0.25;
 
   gl_FragColor = vec4(color, alpha);
 }
@@ -98,7 +98,7 @@ export default function ShaderGradient() {
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.useProgram(prog);
       gl.uniform2f(uRes, canvas.width, canvas.height);
-      gl.uniform1f(uTime, (performance.now() - t0) / 1000);
+      gl.uniform1f(uTime, (performance.now() - t0) / 3000);
       gl.drawArrays(gl.TRIANGLES, 0, 6);
       raf.current = requestAnimationFrame(draw);
     };

@@ -12,8 +12,8 @@ export default function Hero() {
         <div
           className="pointer-events-none absolute left-1/2 top-[-1rem] z-0 h-[52rem] w-[min(100rem,120vw)] -translate-x-1/2 overflow-hidden"
           style={{
-            WebkitMaskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 34%, transparent 82%)',
-            maskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 34%, transparent 82%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 45%, transparent 75%)',
+            maskImage: 'radial-gradient(ellipse 50% 50% at 50% 50%, black 45%, transparent 75%)',
           }}
         >
           <ShaderGradient />

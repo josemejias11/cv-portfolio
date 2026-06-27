@@ -26,7 +26,7 @@ Always specify the model explicitly when dispatching and prefer the cheapest mod
 
 Use this repo's SDD triplet (mechanical implementation pipeline) for spec-driven implementation work:
 
-- **Implementation (primary)** → `sdd-implementer` (`opencode-go/kimi-k2.7-code`) — writes code, runs tests, commits.
+- **Implementation (primary)** → `sdd-implementer` (`openai/gpt-5.3-codex-spark`) — writes code, runs tests, commits.
 - **Implementation (fallback)** → `general` (`openai/gpt-5.4-mini`) — default catch-all when no specialist clearly owns the work.
-- **Task review** → `sdd-reviewer` (`opencode-go/deepseek-v4-pro`) — reviews diffs for spec compliance and code quality.
-- **Architecture / final review** → `sdd-architect` (`openai/gpt-5.5-pro`) — reviews full-branch diffs, makes design and architecture decisions.
+- **Task review** → `sdd-reviewer` (`openai/gpt-5.5`) — reviews diffs for spec compliance and code quality.
+- **Architecture / final review** → `sdd-architect` (`openai/gpt-5.5`) — reviews full-branch diffs, makes design and architecture decisions.
